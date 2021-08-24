@@ -1,0 +1,127 @@
+.todo {
+
+    &__insert {
+        @include list-element-style;
+        color: $clr-gray-blue-verydark-darktheme-1;
+    
+        &-cyrcle {
+            height: 18px;
+            width: 18px;
+            border-radius: 50%;
+            background-color: inherit;
+            border: 1px solid red; /* change to specified color */
+            margin-left: 1em;
+            margin-right: 0.5em;
+        }
+
+        &-inputstyle {
+            border: none;
+            background: transparent;
+            outline: none;
+            color: grey; /* change to specified color */
+            font-family: inherit;
+        }
+    
+    }
+
+    &__list {
+
+        &-list {
+            @include list-element-bullet; 
+        }
+
+        &-item {
+            @include list-element-style;
+            border: 1px solid hotpink;
+        }
+        
+        &-container {  
+            display: block;
+            position: relative;
+            padding-left: 40px; //schiebt den text-block nach rechts, mit inline flex versuchen, dass zu bereinigen
+        }
+
+        &-checkbox {   //Variante A
+            position: absolute;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            border-width: 1px;
+            border-style: solid;
+            border-color: grey;
+            border-radius: 50%;
+            margin-left: 0.5rem;
+            //background: url('images/icon-check.svg') no-repeat;
+        }
+
+        // &-checkbox {   //Variante B
+        //     position: absolute;
+        //     left: 0;
+        //     height: 20px;
+        //     width: 20px;
+        //     border-width: 1px;
+        //     border-style: double;
+        //     border-color: transparent;
+        //     border-radius: 50%;
+        //     margin-left: 0.5rem;
+        //     background-image: linear-gradient($clr-blue-desaturated, $clr-blue-desaturated), linear-gradient(grey, grey);
+        //     background-origin: border-box;
+        //     background-clip: content-box, border-box;
+        // }
+
+        // &-checkbox:hover {  //Variante B
+        //     background-image: linear-gradient($clr-blue-desaturated, $clr-blue-desaturated), $clr-gradient;
+        // }
+
+        &-checkbox:hover {  //Variante A
+            border-style: double;
+            border-color: transparent;  
+            background-image: linear-gradient($clr-blue-desaturated, $clr-blue-desaturated), $clr-gradient;
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+        }
+    }
+
+    &__filter {
+    
+        &-list {
+            @include list-element-bullet;
+        }
+
+        &-button {
+            display: inline;
+        }
+    }
+}
+
+.todo__list-container input {
+    appearance: none;
+    display: none;
+    // position: absolute;
+    // left: 0;
+    // opacity: 1;
+    // height: 13px;
+    // width: 13px;
+}
+
+// input:checked ~ span {      //nur Hintergrund, funktioniert
+//     background-image: $clr-gradient; //bei gradient immer background-image verwenden und nicht background-color
+// }
+
+.todo__list-input:checked + span {
+    background-image: $clr-gradient;
+}
+
+.todo__list-input:checked + span::after {
+    content: url('images/icon-check.svg');
+    display: block; //wird benötigt für die Zentrierung mit text-align. svg ist bei defaul inline und kann so nicht zentriert werden. 
+    text-align: center; //zentriert das svg element in der mitte.
+}
+
+// input:focus-visible ~ span {
+//     outline: 3px solid green;
+//   }
+
+// input:focus ~ span {
+//     border: 3px solid orange;
+// }

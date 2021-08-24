@@ -1,0 +1,26 @@
+/*to be deleted
+body {
+    font-weight: 100;
+}
+*/
+
+@mixin list-element-style {
+    display: flex;
+    width: 100%;
+    padding: 0.8em 0;
+    background-color: $clr-blue-desaturated;
+    border-radius: 3px;
+    @content;
+}
+
+@mixin list-element-bullet {
+    list-style: none;
+    padding-left: 0em;
+    @content;
+}
+
+@mixin desktop {
+    @media screen and (min-width: 730px) {
+        @content;
+    }
+}

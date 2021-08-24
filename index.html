@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="main.css">
+  <title>Frontend Mentor | Todo app</title>
+</head>
+<body>
+  <header class="header-image">
+  </header>
+  <main class="container-todo">
+    <div class="container-title">
+      <h1 class="title"><strong>Todoy</strong></h1>
+      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"><path fill="#FFF" fill-rule="evenodd" d="M13 21a1 1 0 011 1v3a1 1 0 11-2 0v-3a1 1 0 011-1zm-5.657-2.343a1 1 0 010 1.414l-2.121 2.121a1 1 0 01-1.414-1.414l2.12-2.121a1 1 0 011.415 0zm12.728 0l2.121 2.121a1 1 0 01-1.414 1.414l-2.121-2.12a1 1 0 011.414-1.415zM13 8a5 5 0 110 10 5 5 0 010-10zm12 4a1 1 0 110 2h-3a1 1 0 110-2h3zM4 12a1 1 0 110 2H1a1 1 0 110-2h3zm18.192-8.192a1 1 0 010 1.414l-2.12 2.121a1 1 0 01-1.415-1.414l2.121-2.121a1 1 0 011.414 0zm-16.97 0l2.121 2.12A1 1 0 015.93 7.344L3.808 5.222a1 1 0 011.414-1.414zM13 0a1 1 0 011 1v3a1 1 0 11-2 0V1a1 1 0 011-1z"/></svg>
+    </div>
+    <div class="todo">
+      <div class="todo__insert">
+        <span class="todo__insert-cyrcle"></span><input class="todo__insert-inputstyle" type="text" placeholder="Create a new todo...">
+      </div>
+      <div class="todo__list">
+        <ul class="todo__list-list">
+          <!-- Instead of div-Elements "li" has been chosen for accesibiltiy reason. -->
+          <li class="todo__list-item">
+            <label for="item-1" class="todo__list-container">Complete online JavaScript 1 course
+              <input type="checkbox" id="item-1" name="listitem-1" value="Complete online JavaScript course" class="todo__list-input">
+              <span class="todo__list-checkbox" role="checkbox" tabindex="0"></span>
+            </label>
+          </li>
+          <li class="todo__list-item">
+            <input type="checkbox" id="item-2" name="listitem-2" value="Jog around the park 3x">
+            <label for="item-2">Jog around the park 3x</label>
+          </li>
+          <li class="todo__list-item">
+            <input type="checkbox" id="item-3" name="listitem-3" value="10 minutes meditation">
+            <label for="item-3">10 minutes meditation</label>
+          </li>
+          <li class="todo__list-item">
+            <input type="checkbox" id="item-4" name="listitem-4" value="Read for 1 hour">
+            <label for="item-4">Read for 1 hour</label>
+          </li>
+          <li class="todo__list-item">
+            <input type="checkbox" id="item-5" name="listitem-5" value="Pick up groceries">
+            <label for="item-5">Pick up groceries</label>
+          </li>
+          <li class="todo__list-item">
+            <input type="checkbox" id="item-5" name="listitem-6" value="Complete Todo App on Frontend Mentor">
+            <label for="item-5">Complete Todo App on Frontend Mentor</label>
+          </li>
+        </ul>
+      </div>
+      <div class="todo__footer">
+        <div class="todo__footer-leftitems">5 items left</div>
+        <button class="todo__footer-clearbutton">Clear Completed</button>
+      </div>
+      <div class="todo__filter">
+        <ul class="todo__filter-list">
+          <li class="todo__filter-button todo__filter-button--active">All</li>
+          <li class="todo__filter-button">Active</li>
+          <li class="todo__filter-button">Completed</li>
+        </ul>
+      </div>
+      <div class="todo__dragdrop">
+        Drag and drop to reorder list
+      </div>
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#">Your Name Here</a>.
+      </div>
+    </div>
+  </main>
+</body>
+</html>

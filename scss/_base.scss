@@ -1,0 +1,47 @@
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    /*background-color: $background-color;*/
+    background-color: black; /* to be removed, use for test only */
+    font-size: $font-main;
+    font-family: $font-family;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white; /* to be removed, use for test only */
+}
+
+.container-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.container-todo {
+    width: 80vw;
+    position: absolute;
+    font-family: $font-family;
+    border: solid red; /* to be removed */
+
+    @include desktop {
+        width: 600px;
+        margin-top: 5.5rem;
+    }
+}
+
+// Code from frontendmentor.io
+
+.attribution {
+    font-size: 11px; text-align: center; 
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
