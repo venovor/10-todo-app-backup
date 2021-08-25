@@ -16,3 +16,6 @@
 .prettierignore
 *.css
 *.map
+node_modules
+.npm
+creds.js
