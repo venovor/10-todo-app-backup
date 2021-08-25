@@ -7,7 +7,7 @@ html {
 
 body {
     /*background-color: $background-color;*/
-    background-color: darkslategrey; /* to be removed, use for test only */
+    background-color: black; /* to be removed, use for test only */
     font-size: $font-main;
     font-family: $font-family;
     margin: 0;
@@ -28,7 +28,7 @@ body {
     width: 80vw;
     position: absolute;
     font-family: $font-family;
-    border: solid red; /* to be removed */
+    //border: solid red; /* to be removed */
 
     @include desktop {
         width: 600px;
